@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>My tasks</h1>
+</div>
+<div class="container" id="list-task">
+
+  <%@tasks.each do |task| %>
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+        <%= link_to task.title, task_path(task)%>
+      </label>
+      <%=  link_to destroy_path(task), method: :delete, data: {confirm: "Are you sure?" } do %>
+        <i class="fas fa-bomb"></i>
+      <% end %>
+    </div>
+  <% end %>
+</div>
+<div class="container border-top new-task">
+  <i class="fas fa-plus"><%=link_to ' Add a new task',tasks_new_path%></i>
+
+</div>

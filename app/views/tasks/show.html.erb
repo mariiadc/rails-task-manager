@@ -1,0 +1,11 @@
+
+<div class="container">
+  <h1><%= @tasks.title%></h1>
+  <div class="container" id="details">
+    <p><%= @tasks.details%></p>
+  </div>
+<div class="container">
+  <button type="button" class="btn btn-outline-secondary" id="edit"><%=link_to 'Edit',edit_task_path %></button>
+</div>
+<p><%=link_to "Back to list", tasks_path %>
+</div>

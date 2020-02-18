@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>New task</h2>
+</div>
+<div class="container">
+<%= render 'form', task: @tasks %>
+</div>
+<div class="container new-task">
+  <i class="fas fa-undo"><%=link_to " Back to list", tasks_path %></i>
+</div>
