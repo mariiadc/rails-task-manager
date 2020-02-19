@@ -13,7 +13,6 @@ class TasksController < ApplicationController
 
   def new
     @tasks = Task.new
-    @tasks.save
   end
 
   def create
